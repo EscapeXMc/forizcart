@@ -26,7 +26,7 @@ export default function ShippingPolicy() {
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">7. Damaged or Lost Packages</h2>
           <p>If your package arrives damaged or is lost in transit, please contact us within 48 hours of delivery attempt. We will initiate a replacement or refund after verifying the claim with our courier partner.</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">8. Contact for Shipping Issues</h2>
-          <p>For any shipping-related queries, please reach out to our support team at <strong>support@forizcart.com</strong> or call <strong>+91 98765 43210</strong>.</p>
+          <p>For any shipping-related queries, please reach out to our support team at <strong>forizcart@gmail.com</strong> or WhatsApp <strong>+91 76579 42799</strong>.</p>
           <div className="border-t border-ayu-border pt-4 mt-6">
             <p className="text-xs text-ayu-text">Last updated: October 2026</p>
           </div>

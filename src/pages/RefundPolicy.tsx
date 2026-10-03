@@ -26,7 +26,7 @@ export default function RefundPolicy() {
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">7. Cancelled Orders</h2>
           <p>Orders can be cancelled within 24 hours of placement if they have not been dispatched. Once dispatched, orders cannot be cancelled but can be returned after delivery as per the return policy.</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">8. Contact for Refunds</h2>
-          <p>To initiate a return or refund, please email us at <strong>support@forizcart.com</strong> with your order number and reason for return. For urgent assistance, call <strong>+91 98765 43210</strong>.</p>
+          <p>To initiate a return or refund, please email us at <strong>forizcart@gmail.com</strong> with your order number and reason for return. For urgent assistance, WhatsApp <strong>+91 76579 42799</strong>.</p>
           <div className="border-t border-ayu-border pt-4 mt-6">
             <p className="text-xs text-ayu-text">Last updated: October 2026</p>
           </div>

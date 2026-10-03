@@ -14,9 +14,9 @@ export default function ContactUs() {
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Customer Support</h2>
           <p>Our support team is available Monday to Saturday, 9:00 AM to 7:00 PM IST. We typically respond within 24 hours.</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Email</h2>
-          <p>support@forizcart.com</p>
+          <p>forizcart@gmail.com</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Phone</h2>
-          <p>+91 98765 43210</p>
+          <p>+91 76579 42799</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Address</h2>
           <p>ForizCart Headquarters\nMumbai, Maharashtra\nIndia - 400001</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Business Inquiries</h2>
