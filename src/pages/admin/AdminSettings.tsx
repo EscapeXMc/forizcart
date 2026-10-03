@@ -28,7 +28,7 @@ const DEFAULTS: Omit<Settings, 'id'> = {
   store_name: 'ForizCart',
   store_email: 'forizcart@gmail.com',
   store_phone: '+917657942799',
-  store_address: 'Mumbai, India',
+  store_address: 'Rampura Pind, Rampura Phul, Bathinda, Punjab, India - 151103',
   currency: 'INR',
   tax_rate: 18,
   enable_tax: true,

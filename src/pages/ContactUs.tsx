@@ -18,7 +18,7 @@ export default function ContactUs() {
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Phone</h2>
           <p>+91 76579 42799</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Address</h2>
-          <p>ForizCart Headquarters\nMumbai, Maharashtra\nIndia - 400001</p>
+          <p>Rampura Pind, Rampura Phul\nBathinda, Punjab\nIndia - 151103</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Business Inquiries</h2>
           <p>For bulk orders, wholesale inquiries, or partnership opportunities, please contact us at business@forizcart.com.</p>
           <h2 className="text-ayu-text-bright font-semibold uppercase tracking-wider">Follow Us</h2>

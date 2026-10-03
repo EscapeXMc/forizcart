@@ -15,7 +15,7 @@ export default function Contact() {
 
   const email = settings?.store_email || 'forizcart@gmail.com'
   const phone = settings?.store_phone || '+91 76579 42799'
-  const address = settings?.store_address || 'Mumbai, India'
+  const address = settings?.store_address || 'Rampura Pind, Rampura Phul, Bathinda, Punjab, India - 151103'
 
   return (
     <div className="pt-24 pb-12 min-h-screen bg-ayu-bg">
