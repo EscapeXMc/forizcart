@@ -73,7 +73,7 @@ export default function TuiLayout() {
                   </span>
                 )}
               </Link>
-              <button onClick={toggleTheme} onMouseEnter={onHover} className="p-1.5 text-ayu-text hover:text-ayu-primary transition-colors" title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}>
+              <button onClick={toggleTheme} onMouseEnter={onHover} className="p-1.5 text-ayu-text hover:text-ayu-primary transition-colors" title={`Switch to ${theme === 'dark' ? 'skyblue' : 'dark'} mode`}>
                 {theme === 'dark' ? <SunIcon className="w-4 h-4" /> : <MoonIcon className="w-4 h-4" />}
               </button>
               {user ? (
@@ -109,7 +109,7 @@ export default function TuiLayout() {
               </Link>
               <button onClick={() => { toggleTheme(); setOpen(false); }} onMouseEnter={onHover} className="flex items-center gap-3 px-3 py-2.5 text-[11px] font-semibold uppercase tracking-wider min-h-[44px] w-full text-left text-ayu-text hover:text-ayu-primary">
                 {theme === 'dark' ? <SunIcon className="w-4 h-4" /> : <MoonIcon className="w-4 h-4" />}
-                {theme === 'dark' ? 'Light Mode' : 'Dark Mode'}
+                {theme === 'dark' ? 'Skyblue' : 'Dark Mode'}
               </button>
               <div className="h-px bg-ayu-border my-1.5" />
               {user ? (

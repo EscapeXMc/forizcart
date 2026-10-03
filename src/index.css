@@ -1,1 +1,230 @@
 @import "tailwindcss";
+
+@theme {
+  --color-ayu-bg: #050505;
+  --color-ayu-surface: #0f0f0f;
+  --color-ayu-panel: #141414;
+  --color-ayu-border: #232323;
+  --color-ayu-border-bright: #333333;
+  --color-ayu-text: #c7c7c7;
+  --color-ayu-text-bright: #f5f5f5;
+  --color-ayu-primary: #ffb800;
+  --color-ayu-primary-dim: #ffb800;
+  --color-ayu-secondary: #00cfa0;
+  --color-ayu-accent: #ff5f7a;
+  --color-ayu-warning: #f4b93b;
+  --color-ayu-error: #ff4d4f;
+  --color-ayu-success: #2ecc71;
+  --font-ayu: "JetBrains Mono", "Fira Code", "SF Mono", "Cascadia Code", "Consolas", "Courier New", monospace;
+}
+
+.theme-light {
+  --color-ayu-bg: #f0f9ff;
+  --color-ayu-surface: #f8fbff;
+  --color-ayu-panel: #ffffff;
+  --color-ayu-border: #bae6fd;
+  --color-ayu-border-bright: #7dd3fc;
+  --color-ayu-text: #0f172a;
+  --color-ayu-text-bright: #082f49;
+  --color-ayu-primary: #0ea5e9;
+  --color-ayu-primary-dim: #0284c7;
+  --color-ayu-secondary: #06b6d4;
+  --color-ayu-accent: #e0245e;
+  --color-ayu-warning: #f59e0b;
+  --color-ayu-error: #dc2626;
+  --color-ayu-success: #16a34a;
+}
+
+@layer base {
+  :root {
+    font-family: var(--font-ayu);
+    background-color: var(--color-ayu-bg);
+    color: var(--color-ayu-text);
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-ayu-bg);
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(245, 185, 78, 0.06) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(143, 188, 67, 0.06) 0%, transparent 40%);
+  }
+  .theme-light body {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.08) 0%, transparent 40%);
+  }
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-ayu-border-bright) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--color-ayu-border-bright);
+    border-radius: 9999px;
+  }
+}
+
+@layer components {
+  .ayu-panel {
+    background-color: var(--color-ayu-panel);
+    border: 1px solid var(--color-ayu-border);
+    box-shadow: 0 10px 30px -10px rgba(92, 75, 42, 0.08);
+  }
+  .ayu-card {
+    background-color: var(--color-ayu-panel);
+    border: 1px solid var(--color-ayu-border);
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ayu-card:hover {
+    border-color: var(--color-ayu-border-bright);
+    box-shadow: 0 0 0 1px rgba(199, 125, 0, 0.15), 0 20px 40px -15px rgba(92, 75, 42, 0.15);
+    transform: translateY(-2px);
+  }
+  .ayu-input {
+    background-color: var(--color-ayu-surface);
+    border: 1px solid var(--color-ayu-border);
+    color: var(--color-ayu-text-bright);
+    font-family: var(--font-ayu);
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ayu-input:focus {
+    outline: none;
+    border-color: var(--color-ayu-primary);
+    box-shadow: 0 0 0 3px rgba(199, 125, 0, 0.12), 0 0 20px -5px rgba(199, 125, 0, 0.25);
+  }
+  .ayu-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-family: var(--font-ayu);
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .ayu-btn-primary {
+    background-color: var(--color-ayu-primary);
+    color: #ffffff;
+    border-color: var(--color-ayu-primary);
+  }
+  .ayu-btn-primary:hover {
+    background-color: var(--color-ayu-primary-dim);
+    box-shadow: 0 0 20px -5px rgba(199, 125, 0, 0.5);
+  }
+  .ayu-btn-secondary {
+    background-color: transparent;
+    color: var(--color-ayu-secondary);
+    border-color: var(--color-ayu-secondary);
+  }
+  .ayu-btn-secondary:hover {
+    background-color: rgba(107, 142, 35, 0.08);
+  }
+  .ayu-btn-danger {
+    background-color: transparent;
+    color: var(--color-ayu-error);
+    border-color: var(--color-ayu-error);
+  }
+  .ayu-btn-danger:hover {
+    background-color: rgba(192, 57, 43, 0.08);
+  }
+  .ayu-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.125rem 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 600;
+    border: 1px solid;
+  }
+  .ayu-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+  }
+  .ayu-table th {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    color: var(--color-ayu-primary);
+    border-bottom: 1px solid var(--color-ayu-border);
+  }
+  .ayu-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--color-ayu-border);
+    color: var(--color-ayu-text);
+  }
+  .ayu-table tr:hover td {
+    background-color: rgba(199, 125, 0, 0.05);
+  }
+  .ayu-enter {
+    animation: ayu-enter 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes ayu-enter {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .ayu-fade {
+    animation: ayu-fade 350ms ease;
+  }
+  @keyframes ayu-fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .ayu-spin {
+    animation: ayu-spin 4s linear infinite;
+  }
+  @keyframes ayu-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .ayu-float {
+    animation: ayu-float 3s ease-in-out infinite;
+  }
+  @keyframes ayu-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+  .ayu-pulse-soft {
+    animation: ayu-pulse-soft 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  @keyframes ayu-pulse-soft {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(0.96); }
+  }
+  .ayu-shimmer {
+    background: linear-gradient(90deg, transparent 0%, rgba(199, 125, 0, 0.08) 50%, transparent 100%);
+    background-size: 200% 100%;
+    animation: ayu-shimmer 2s linear infinite;
+  }
+  @keyframes ayu-shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .ayu-page-enter {
+    animation: ayu-page-enter 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  @keyframes ayu-page-enter {
+    from { opacity: 0; transform: translateY(10px) scale(0.995); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .ayu-exit {
+    animation: ayu-exit 350ms cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  @keyframes ayu-exit {
+    from { opacity: 1; transform: translateY(0) scale(1); }
+    to { opacity: 0; transform: translateY(-10px) scale(0.995); }
+  }
+}
